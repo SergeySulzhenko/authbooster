@@ -55,8 +55,16 @@ $this->breadcrumbs = array(
                 'type' => 'inline',
             )); ?>
 
-            <?php echo $form->dropDownListRow($formModel, 'items', $assignmentOptions, array('label' => false)); ?>
-
+            <?php $this->widget('bootstrap.widgets.TbSelect2', array(
+                'model'=>$formModel,
+                'attribute'=>'items',
+                'data'=>$assignmentOptions,
+                'options'=>array(
+                    'width'=>'450px',
+                    'placeholder'=>Yii::t('AuthModule.main', 'Select item'),
+                    'allowClear'=>true,
+                ),
+            ) ); ?>
             <?php $this->widget('bootstrap.widgets.TbButton', array(
               'buttonType' => 'submit',
               'label' => Yii::t('AuthModule.main', 'Assign'),
