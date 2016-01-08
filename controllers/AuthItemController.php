@@ -54,7 +54,7 @@ abstract class AuthItemController extends AuthController
                     }
                 }
 
-                $this->redirect(array('view', 'name' => $item->name));
+                $this->redirect(array('view', 'name' => rawurlencode($item->name)));
             }
         }
 
@@ -75,6 +75,8 @@ abstract class AuthItemController extends AuthController
      */
     public function actionUpdate($name)
     {
+        $name = rawurldecode($name);
+
         /* @var $am CAuthManager|AuthBehavior */
         $am = Yii::app()->getAuthManager();
 
@@ -175,6 +177,7 @@ abstract class AuthItemController extends AuthController
     {
         if (isset($_GET['name'])) {
             $name = $_GET['name'];
+            $name = rawurldecode($name);
 
             /* @var $am CAuthManager|AuthBehavior */
             $am = Yii::app()->getAuthManager();

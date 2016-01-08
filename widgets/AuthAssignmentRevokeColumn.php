@@ -38,7 +38,7 @@ class AuthAssignmentRevokeColumn extends AuthAssignmentColumn
                     'type' => 'link',
                     'size' => 'mini',
                     'icon' => 'remove',
-                    'url' => array('revoke', 'itemName' => $data['name'], 'userId' => $this->userId),
+                    'url' => array('revoke', 'itemName' => rawurlencode($data['name']), 'userId' => $this->userId),
                     'htmlOptions' => array('rel' => 'tooltip', 'title' => Yii::t('AuthModule.main', 'Revoke')),
                 )
             );

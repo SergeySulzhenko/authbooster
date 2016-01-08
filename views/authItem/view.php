@@ -25,11 +25,11 @@ $this->breadcrumbs = array(
 		'buttons'=>array(
 			array(
 				'label'=>Yii::t('AuthModule.main', 'Edit'),
-				'url'=>array('update', 'name'=>$item->name),
+				'url'=>array('update', 'name'=>rawurlencode($item->name)),
 			),
 			array(
 				'icon'=>'trash',
-				'url'=>array('delete', 'name'=>$item->name),
+				'url'=>array('delete', 'name'=>rawurlencode($item->name)),
 				'htmlOptions'=>array(
 					'confirm'=>Yii::t('AuthModule.main', 'Are you sure you want to delete this item?'),
 				),

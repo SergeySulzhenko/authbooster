@@ -87,6 +87,7 @@ class AssignmentController extends AuthController
         if (isset($_GET['itemName'], $_GET['userId'])) {
             $itemName = $_GET['itemName'];
             $userId = $_GET['userId'];
+            $itemName = rawurldecode($itemName);
 
             /* @var $am CAuthManager|AuthBehavior */
             $am = Yii::app()->getAuthManager();
