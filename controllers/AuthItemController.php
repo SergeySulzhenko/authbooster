@@ -119,6 +119,7 @@ abstract class AuthItemController extends AuthController
      */
     public function actionView($name)
     {
+        $name = rawurldecode($name);
         $formModel = new AddAuthItemForm();
 
         /* @var $am CAuthManager|AuthBehavior */

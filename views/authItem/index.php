@@ -26,7 +26,7 @@ $this->breadcrumbs = array(
 			'type'=>'raw',
 			'header' => Yii::t('AuthModule.main', 'System name'),
 			'htmlOptions' => array('class'=>'item-name-column'),
-			'value' => "CHtml::link(\$data->name, array('view', 'name'=>\$data->name))",
+			'value' => "CHtml::link(\$data->name, array('view', 'name'=>rawurlencode(\$data->name)))",
 		),
 		array(
 			'name' => 'description',
