@@ -1,0 +1,19 @@
+{
+  "name": "robregonm/authbooster",
+  "description": "AuthBooster is a module for the Yii PHP framework that provides a web user interface for Yii's built-in authorization manager (CAuthManager)",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "keywords": ["yii", "bootstrap", "auth"],
+  "homepage": "https://github.com/robregonm/authbooster",
+  "authors": [
+    {
+      "name": "Ricardo Obregón"
+    }
+  ],
+  "require": {
+    "php":">=5.4.0"
+  },
+  "require-dev": {
+  },
+  "minimum-stability": "dev"
+}
